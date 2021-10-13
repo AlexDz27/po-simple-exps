@@ -24,9 +24,13 @@ $parameters = [
 
 $request = array_merge($defaults, $parameters);
 ksort($request);
+echo "<pre>";
 print_r($request);
+echo "</pre>";
 $response = Payone::sendRequest($request, "json");
+echo "<pre>";
 print_r($response);
+echo "</pre>";
 /*This should return something like this (yes, structured JSON):
 {
     "Status": "OK",
